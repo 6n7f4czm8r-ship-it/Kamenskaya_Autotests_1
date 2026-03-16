@@ -17,6 +17,8 @@ driver.implicitly_wait(10)
 #     driver.quit()
 
 def test_button_1():
-    found_button = driver.find_element(By.CLASS_NAME, "btn btn-yellow for-utm-link")
+    alert = driver.switch_to.alert
+    alert.accept()
+    found_button = driver.find_element(By.XPATH, "//a[text()='Записаться на прием']")
     found_button.click()
     driver.quit()
