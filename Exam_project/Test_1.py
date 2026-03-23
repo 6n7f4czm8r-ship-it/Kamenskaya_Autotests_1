@@ -10,18 +10,26 @@ driver.get('https://perm.medsi.ru/')
 driver.maximize_window()
 driver.implicitly_wait(10)
 
-def test_button_1():
-    try:
-        close_button = WebDriverWait(driver, 20).until(
-            EC.element_to_be_clickable((By.CLASS_NAME, "cookie-alert__button js-save-cookie-btn"))
-        )
-        close_button.click()
-        print("Всплывающее окно закрыто")
-    except:
-        print("Окно не появилось")
+#def test_button_1():
+#   try:
+#       close_button = WebDriverWait(driver, 20).until(
+#            EC.element_to_be_clickable((By.CSS_SELECTOR, "div.cookie-alert__button.js-save-cookie-btn"))
+#        )
+#        close_button.click()
+#        print("Всплывающее окно закрыто")
+#   except Exception as e:
+#        print("Окно не появилось")
+
+#    pass
 
 # def test_button_2():
-#     found_button = driver.find_element(By.XPATH, "//a[text()='Записаться на прием']")
-#     found_button.click()
-#     assert text == "Записаться на прием"
-#     driver.quit()
+#     try:
+#         close_button = WebDriverWait(driver, 20).until(
+#             EC.element_to_be_clickable((By.CSS_SELECTOR, "div.youRegion__btn-t1.btn-yellow.confirmRegion"))
+#         )
+#         close_button.click()
+#         print("Всплывающее окно закрыто")
+#     except Exception as e:
+#         print("Окно не появилось")
+#
+#     pass
